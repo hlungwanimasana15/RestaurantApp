@@ -1,0 +1,79 @@
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="rastua.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+    <script>function displayInPuts() {
+        var manu = document.getElementById("menu").value;
+        var thefood = document.getElementById("thefood").value;
+        var chips = document.getElementById("chips").value;
+        var salad = document.getElementById("Salad").value;
+        var sauce1 = document.getElementById("sauce1").value;
+        var sauce2 = document.getElementById("sauce2").value;
+        var sauce3 = document.getElementById("sauce3").value;
+        var quantity = document.getElementById("quantity").value
+
+        var display = "manu:" +" "+ manu + "thefood:" +" " + thefood  + "chips"+" " + chips + "salad"  +" "+
+            salad + "sauce1" +" " + sauce1 + + "sauce2"  +" "+ sauce2 + "sauce3" +" " + sauce3 + "quantity" +" " + quantity;
+        document.getElementById("displayText").innerHTML = display;
+        console.log(displayInPuts);
+    }</script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <h2 class="logo">LOGO</h2>
+            <a href="./resta.html">Home</a>
+            <a href="./manu.html">Manu</a>
+            <a href="./order.html">Orders</a>
+            <a href="./card.html">Cart</a>
+        </nav>
+    </div>
+    <form name="option" id="form1">
+        The Menu : <select name="manu" id="menu">
+            <option value="" selected="selected">what are we having today?</option>
+        </select>
+        <br><br>
+        the food : <select name="food" id="thefood">
+            <option value="" selected="selected">Please select your choice</option>
+        
+        </select>
+        <br><br>
+
+        <h1>Please select your sides</h1>
+        
+            <input type="radio" value="chips" name="sides" >
+            <label for="chips">chips</label><br>
+            <input type="radio" value="Salad" name="sides" >
+            <label for="Salad">Salad</label>
+
+        <br></br>
+        <h1>Please select your sauce</h1>
+        <input type="checkbox" id="sauce1" name="sauce" value="BBQ">
+        <label for="sauce1" >BBQ </label><br>
+        <input type="checkbox" id="sauce2" name="sauce"  value="Hot sauce">
+        <label for="sauce2" > Hot sauce</label><br>
+        <input type="checkbox" id="sauce3" name="sauce" value="sweet chilli">
+        <label for="sauce3"> sweet chilli</label><br><br>
+
+        <label for="quantity">how many would you like?</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="5"><br></br>
+
+        
+        <label for="textBox" id="displayText"></label>
+        <input type="textBox" id="fname"><br><br>
+
+        <div class="printValues">
+            <p id="valueList"></p>
+
+        </div>
+
+    <button type="button" onclick="displayInPuts()">Submit</button>
+    </form>
+    <script src="resta.js"></script>
+</body>
+
+</html>
